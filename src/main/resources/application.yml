@@ -1,0 +1,38 @@
+server:
+  port: 8080  
+spring:
+  mvc:
+    view: 
+      prefix: /page/
+      suffix: .jsp 
+  datasource:
+    url: jdbc:mysql://localhost:3306/springbootcrud?characterEncoding=utf8&useSSL=false      
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password:
+ # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20          
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo.model
+
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+       
