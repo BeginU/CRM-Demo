@@ -6,10 +6,10 @@ spring:
       prefix: /page/
       suffix: .jsp 
   datasource:
-    url: jdbc:mysql://localhost:3306/springbootcrud?characterEncoding=utf8&useSSL=false      
+    url: jdbc:mysql://localhost:3306/huiyuan?characterEncoding=utf8&useSSL=false
     driverClassName: com.mysql.jdbc.Driver
     username: root
-    password:
+    password: root
  # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     filters: stat

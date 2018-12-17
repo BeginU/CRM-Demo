@@ -17,7 +17,15 @@ public class LoginController {
 	public String login(){
 		return "login";
 	}
-	
+
+
+	//websocket
+	@RequestMapping(value="/websocket",method=RequestMethod.GET)
+	public String websocket(){
+		return "other/websocket";
+	}
+
+
 	//注册
 	@RequestMapping(value="/register",method=RequestMethod.GET)
 	public String register(){
